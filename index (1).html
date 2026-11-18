@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="STUDY FREE UG — free online learning for everyone. Learn practical skills in 30 days.">
+  <title>STUDY FREE UG | Learn Today. Build Tomorrow.</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="#home" aria-label="Study Free UG home"><span class="brand-mark">SF</span><span>STUDY <b>FREE UG</b><small>Learn today. Build tomorrow.</small></span></a>
+  <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">☰</button>
+  <nav id="mainNav">
+    <a href="#courses">Courses</a><a href="#how">How it works</a><a href="#about">About</a>
+    <button class="btn btn-outline" id="loginNav">Log in</button>
+    <button class="btn btn-primary" id="registerNav">Join free</button>
+  </nav>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="hero-copy">
+    <span class="eyebrow">100% FREE LEARNING • OPEN TO EVERYONE</span>
+    <h1>Learn today.<br><em>Build tomorrow.</em></h1>
+    <p>Turn your free time into practical skills. Learn computer basics, AI, project management and more — at your own pace.</p>
+    <div class="hero-actions"><button class="btn btn-primary btn-large" id="heroJoin">Start learning free →</button><a class="btn btn-light btn-large" href="#courses">Explore courses</a></div>
+    <p class="priority"><strong>Holiday makers welcome:</strong> P7, S4 and S6 learners are our priority — and everyone is welcome.</p>
+  </div>
+  <div class="hero-art" aria-label="Learning illustration">
+    <div class="art-circle"></div><div class="art-card"><div class="art-icon">✦</div><h3>Your next skill starts here.</h3><p>Small steps. Real skills. New opportunities.</p><div class="progress"><span></span></div><small>Keep learning • Keep growing</small></div>
+    <div class="floating-tag tag-one">💻 Computer skills</div><div class="floating-tag tag-two">🤖 AI for everyone</div>
+  </div>
+</section>
+
+<section class="stats">
+  <div><strong>7</strong><span>Starter courses</span></div><div><strong>30 days</strong><span>Suggested learning journey</span></div><div><strong>UGX 0</strong><span>Course enrolment fee</span></div><div><strong>Everyone</strong><span>Is welcome</span></div>
+</section>
+
+<section class="section" id="courses">
+  <div class="section-heading"><div><span class="eyebrow">CHOOSE YOUR NEXT SKILL</span><h2>Explore free courses</h2><p>Choose a course, enrol for free and begin learning.</p></div><input id="courseSearch" class="search" type="search" placeholder="Search courses..." aria-label="Search courses"></div>
+  <div class="filters" id="filters"><button class="filter active" data-filter="All">All courses</button><button class="filter" data-filter="Digital">Digital skills</button><button class="filter" data-filter="Business">Business & projects</button><button class="filter" data-filter="Data">Data & development</button></div>
+  <div class="course-grid" id="courseGrid"></div>
+</section>
+
+<section class="how-section" id="how"><div class="section-heading centered"><span class="eyebrow">SIMPLE TO GET STARTED</span><h2>Your learning journey in 4 steps</h2><p>No complicated process. Start with the skills you need.</p></div>
+  <div class="steps"><article><span>01</span><h3>Create your account</h3><p>Register with your name and contact details.</p></article><article><span>02</span><h3>Choose a course</h3><p>Explore the catalogue and enrol for free.</p></article><article><span>03</span><h3>Learn and practise</h3><p>Study lessons, complete activities and quizzes.</p></article><article><span>04</span><h3>Complete your course</h3><p>Meet the course requirements and print your completion certificate.</p></article></div>
+</section>
+
+<section class="community" id="about"><div><span class="eyebrow">LEARNING IS BETTER TOGETHER</span><h2>Join our learning community</h2><p>Connect with fellow learners, receive updates and share your learning journey.</p></div><a class="btn btn-white btn-large" href="https://chat.whatsapp.com/ExoDCsnoeHX6tYN2B632IU?s=cl&p=a&mlu=4&ilr=4&iam=2" target="_blank" rel="noopener">Join WhatsApp community ↗</a></section>
+</main>
+
+<footer><a class="brand footer-brand" href="#home"><span class="brand-mark">SF</span><span>STUDY <b>FREE UG</b><small>Learn today. Build tomorrow.</small></span></a><p>Free learning opportunities for everyone. Learn at your own pace.</p><small>© <span id="year"></span> STUDY FREE UG. Prototype edition.</small></footer>
+
+<div class="modal-backdrop" id="authModal" hidden>
+  <section class="modal" role="dialog" aria-modal="true" aria-labelledby="authTitle">
+    <button class="modal-close" id="closeAuth" aria-label="Close">×</button>
+    <span class="eyebrow">YOUR LEARNING JOURNEY</span><h2 id="authTitle">Create your free account</h2><p id="authIntro">Join STUDY FREE UG and start learning.</p>
+    <form id="authForm">
+      <label id="nameLabel">Full name<input id="fullName" autocomplete="name" required placeholder="e.g. Amina Namusoke"></label>
+      <label>Email address<input id="email" type="email" autocomplete="email" required placeholder="you@example.com"></label>
+      <label id="categoryLabel">I am a<select id="category" required><option value="">Select learner category</option><option>P7 holiday maker</option><option>S4 holiday maker</option><option>S6 holiday maker</option><option>University student</option><option>Graduate</option><option>Professional</option><option>Entrepreneur</option><option>Other</option></select></label>
+      <label>Password<input id="password" type="password" minlength="6" autocomplete="new-password" required placeholder="At least 6 characters"></label>
+      <p class="form-error" id="authError" role="alert"></p>
+      <button class="btn btn-primary btn-large full" type="submit" id="authSubmit">Create account</button>
+    </form>
+    <p class="switch-auth" id="switchAuth">Already registered? <button type="button" id="switchMode">Log in</button></p>
+    <small class="prototype-note">Prototype only: account details are stored in this browser. Do not use a password you use elsewhere. This is not secure production authentication.</small>
+  </section>
+</div>
+
+<div class="modal-backdrop" id="dashboardModal" hidden>
+  <section class="modal dashboard-modal" role="dialog" aria-modal="true" aria-labelledby="dashboardTitle">
+    <button class="modal-close" id="closeDashboard" aria-label="Close">×</button>
+    <span class="eyebrow">YOUR PERSONAL LEARNING SPACE</span><h2 id="dashboardTitle">My learning dashboard</h2>
+    <p id="welcomeText"></p><div id="dashboardCourses"></div>
+    <div class="dashboard-actions"><button class="btn btn-outline" id="logoutBtn">Log out</button><button class="btn btn-primary" id="dashboardExplore">Explore courses</button></div>
+  </section>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="script.js"></script>
+</body>
+</html>
